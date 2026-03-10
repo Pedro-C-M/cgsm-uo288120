@@ -4,15 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reportY .css">
-    <title>Overlay</title>
+    <link rel="stylesheet" href="report.css">
+    <title>Práctica 1 - PedroCM</title>
 </head>
 <body>
+<div class="main-container">    
     <h1>Práctica 1 - CGSM</h1>
+    <p><strong>Autor:</strong> PedroCM</p>
+    <span class="disclaimer">Puede que si no está maximizada la ventana se vean las figuras distorsionadas, también si se mueve se puede tener que recargar página.</span>
+
+    <h3>Práctica 1.2: Primera escena</h3>
+    <p>Resumen: Simplemente un cubo de frente.</p>
+    <div id="prac2" class="escena"></div>
+    <h3>Práctica 1.3: Rotación</h3>
+    <p>Resumen: No se sabía si era cubo de frente o un cuadrado, ahora rotado todo se esclarece.</p>
+    <div id="prac3" class="escena"></div>
+    <h3>Práctica 1.4: Geometrías Básicas</h3>
+    <p>Resumen: Cubo, Cilindro y Esfera. Interesante.</p>
+    <div id="prac4" class="escena"></div>
+    <h3>Práctica 1.5: Geometría Personalizada (La casa)</h3>
+    <P>El proceso es bonito en esta vida: </P>
+    <img src="./assets/casa-proceso.png" alt="Casa en proceso"> 
+    <p>Resumen: Crear geometrías personalizadas con vertices y triángulos, de primera mano cuesta entender, también se hizo la construcción de una hermosa casa </p>
+    <div id="prac5" class="escena"></div>
+    <h3>Práctica 1.6: Iluminación y Materiales</h3>
+    <p>Resumen: Escena final que combina todas las geometrías con diferentes materiales e iluminación.</p>
+    <div id="prac6" class="escena"></div>  
+
     
-    <div class="practica-container" id="caja-prac1"></div>
-    <div class="practica-container" id="caja-prac2"></div>
-    
-    <canvas id="canvas-fondo"></canvas>
+    <script type="module" src="./dist/prac1-1.js"></script>
+    <script type="module" src="./dist/prac1-2.js"></script>
+    <script type="module" src="./dist/prac1-3.js"></script>
+    <script type="module" src="./dist/prac1-4.js"></script>
+    <script type="module" src="./dist/prac1-5.js"></script>
+    <script type="module" src="./dist/prac1-6.js"></script>
+</div>
 </body>
 </html>

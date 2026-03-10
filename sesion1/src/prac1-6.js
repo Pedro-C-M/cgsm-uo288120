@@ -14,12 +14,14 @@ window.addEventListener( 'resize', ( ) => {
     renderer.render( scene, camera );
 }, false );
 
+const contenedor = document.getElementById('prac6');
+
 //-------Escena y renderer-------
 const scene = new THREE.Scene();
 scene.background = new THREE.Color( 0xaaaaaa );
 const renderer = new THREE.WebGLRenderer( {antialias: true} );
-renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
+renderer.setSize( contenedor.clientWidth, contenedor.clientHeight );
+contenedor.appendChild( renderer.domElement );
 
 //-------Cámara-------
 const camera = new THREE.PerspectiveCamera ( 45, window.innerWidth / window.innerHeight, 1, 4000 );

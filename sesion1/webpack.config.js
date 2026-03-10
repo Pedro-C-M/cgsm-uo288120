@@ -1,7 +1,6 @@
 module.exports = {
     mode: "development",
     entry: {
-      "": "./src/index.js",
       "prac1-1": "./src/prac1-1.js",
       "prac1-2": "./src/prac1-2.js",
       "prac1-3": "./src/prac1-3.js",
