@@ -6,7 +6,7 @@ if ( WEBGL.isWebGL2Available() ) {
     console.log("Esta disponible")
 }
 
-//Redimensionamiento
+//-------Redimensionamiento-------
 window.addEventListener( 'resize', ( ) => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix( );
@@ -14,15 +14,34 @@ window.addEventListener( 'resize', ( ) => {
     renderer.render( scene, camera );
 }, false );
 
+//-------Escena y renderer-------
 const scene = new THREE.Scene();
+scene.background = new THREE.Color( 0xaaaaaa );
 const renderer = new THREE.WebGLRenderer( {antialias: true} );
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
-
+//-------Cámara-------
 const camera = new THREE.PerspectiveCamera ( 45, window.innerWidth / window.innerHeight, 1, 4000 );
 camera.position.set( 0, 0, 300 );
 
+//-------Luz-------
+///**
+const light = new THREE.PointLight( 0xffffff, 100000);
+light.position.set( 0, 100, 200 );
+scene.add( light );
+//*/
+//Pruebo con los otros tipos de luz
+/** 
+const light = new THREE.AmbientLight(0xffffff);
+scene.add( light );
+*/
+/** 
+const light = new THREE.DirectionalLight( 0xffffff, 0.5 );
+scene.add( light );
+*/
+
+//-------Objetos-------
 const geometry = new THREE.BoxGeometry( 50, 50, 50 );
 const material = new THREE.MeshBasicMaterial( );
 const box = new THREE.Mesh( geometry, material );
@@ -44,10 +63,7 @@ const cylinder = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
 cylinder.position.set( 70, 0, 0 );
 cylinder.rotation.set( Math.PI / 6, 0, 0 ); 
 
-
-
-
-const geometry1 = new THREE.BufferGeometry();
+const casaGeometry = new THREE.BufferGeometry();
 
 const inner = 20;
 const outer = 40;
@@ -68,16 +84,16 @@ const indices = [
     3,2,4
 ];
 
-geometry1.setIndex( indices );
-geometry1.setAttribute( 'position', new THREE.BufferAttribute( vertices, 3 ) );
+casaGeometry.setIndex( indices );
+casaGeometry.setAttribute( 'position', new THREE.BufferAttribute( vertices, 3 ) );
 
 const material1 = new THREE.MeshBasicMaterial({ color: 0x00ff00});
-const mesh = new THREE.Mesh( geometry1, material1 );
+const casa = new THREE.Mesh( casaGeometry, material1 );
 
-mesh.position.set(0, 70, 0);
+casa.position.set(0, 70, 0);
 
 
-scene.add( mesh );
+scene.add( casa );
 scene.add( box );
 scene.add( cylinder );
 scene.add( sphere );
