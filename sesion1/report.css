@@ -1,40 +1,31 @@
-.main-container {
+table #general {
+    font-family: "Helvetica Neue", Helvetica, sans-serif
+}
+
+th {
+    background: SteelBlue;
+    color: white;
+}
+
+th,
+td {
+    padding: 5px 10px;
+}
+
+tr {
+    background: WhiteSmoke;
+}
+
+iframe.container {
+    min-height: 500px;
     width: 100%;
-    max-width: 900px;
-	margin: 40px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 30px; 
+    background-color: black;
+    border-top: #c00 1px dotted;
+    border-right: #c00 2px dotted;
+    border-left: #c00 2px dotted;
+    border-bottom: #c00 4px dotted;
 }
 
-.escena {
-    width: 100%;         
-    aspect-ratio: 16 / 9;  
-    background-color: #111;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-top: 15px;
-}
-
-
-h1 { text-align: center; color: #222; }
-h3 { margin-top: 0; 
-	color: #333; 
-	border-bottom: 2px solid #3498db; 
-	display: inline-block; 
-}
-.disclaimer {
-    font-size: 0.85rem;     /* Un poco más pequeño que el texto normal */
-    font-style: italic;    /* Pone la letra en cursiva */
-    color: #888;           /* Un gris suave para que no distraiga tanto */
-    text-align: center;    /* Centrado respecto al contenedor */
-    margin-top: 10px;      /* Espacio con el elemento de arriba */
-    display: block;        /* Para que ocupe su propia línea */
-}
-
-img {
-  display: block;
-  margin: 10px auto; /* Centra la imagen y da espacio arriba/abajo */
-  max-width: 100%;    /* Asegura que no se salga de la pantalla */
-  height: auto;
+.code {
+    font-style: italic;
 }

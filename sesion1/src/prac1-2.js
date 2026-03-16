@@ -6,12 +6,10 @@ if ( WEBGL.isWebGL2Available() ) {
     console.log("Está disponible")
 }
 
-const contenedor = document.getElementById('prac2');
-
 const scene = new THREE.Scene();
 const renderer = new THREE.WebGLRenderer( {antialias: true} );
-renderer.setSize( contenedor.clientWidth, contenedor.clientHeight );
-contenedor.appendChild( renderer.domElement );
+renderer.setSize( window.innerWidth, window.innerHeight );
+document.body.appendChild( renderer.domElement );
 
 const camera = new THREE.PerspectiveCamera ( 45, window.innerWidth / window.innerHeight, 1, 4000 );
 camera.position.set( 0, 0, 300 );
